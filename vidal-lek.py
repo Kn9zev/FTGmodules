@@ -10,7 +10,7 @@ from .. import loader, utils
 @loader.tds
 class VidalMod(loader.Module):
     """Поиск препарата и его описания по справочнику Видаля (vidal.ru) / by Knyazev"""
-    strings = {"name": "VidalMod"}
+    strings = {"name": "VidalInfo"}
 
     async def vicmd(self, m):
         """.vi <препарат>"""
