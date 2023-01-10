@@ -15,6 +15,7 @@ class VidalMod(loader.Module):
     async def vicmd(self, m):
         """.vi <препарат>"""
         lek = utils.get_args_raw(m).replace(" ", "%20")
-        r = requests.get("https://knyazev.xyz/vidal/?lek=" + lek)
+        user_agent = {'User-agent': 'Mozilla/5.0'}
+        r = requests.get("https://knyazev.xyz/vidal/?lek=" + lek, headers=user_agent)
 
         await utils.answer(m, r.text)
